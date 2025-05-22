@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "Anna M\u00fcller",
+    "subject": "Mathematik",
+    "description": "Engagiert und verst\u00e4ndnisvoll.",
+    "ratings": [
+      {
+        "stars": 5,
+        "comment": "Super Lehrer!"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Lars Schmidt",
+    "subject": "Physik",
+    "description": "Kreativ im Unterricht.",
+    "ratings": []
+  }
+]
