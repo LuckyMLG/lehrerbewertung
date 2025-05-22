@@ -1,0 +1,395 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #007AFF;
+}
+.logo span {
+  color: #333;
+  font-weight: 400;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #007AFF;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right bottom, #eef2f3, #ffffff);
+  padding-bottom: 40px;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Lehrerliste */
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teacher-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+}
+.teacher-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #eee;
+  transition: all 0.3s ease;
+}
+.teacher-card:hover img {
+  border-color: #007AFF;
+  transform: scale(1.05);
+}
+.teacher-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.teacher-card p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+.rating {
+  font-size: 1.1rem;
+  color: gold;
+  margin-bottom: 10px;
+}
+.teacher-card .buttons {
+  display: flex;
+  gap: 10px;
+}
+.teacher-card button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.btn-primary {
+  background-color: #007AFF;
+  color: white;
+}
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #999;
+  background: white;
+  border-top: 1px solid #eee;
+}
+.footer a {
+  color: #007AFF;
+  text-decoration: none;
+}
+
+/* Bewertungsformular */
+.rating-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.6s ease;
+}
+
+.rating-form h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.rating-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.rating-form input,
+.rating-form textarea,
+.rating-form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.rating-form input:focus,
+.rating-form textarea:focus {
+  border-color: #007AFF;
+  outline: none;
+}
+
+.rating-form .star-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.rating-form .star-buttons button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.rating-form .star-buttons button:hover,
+.rating-form .star-buttons button.active {
+  color: gold;
+}
+
+.rating-form button[type="submit"] {
+  background-color: #007AFF;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background 0.3s ease;
+}
+
+.rating-form button[type="submit"]:hover {
+  background-color: #005fd1;
+}
+
+/* Lehrer-Detailansicht */
+.teacher-detail {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.5s ease;
+}
+
+.teacher-detail .header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.teacher-detail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  transition: all 0.3s ease;
+}
+.teacher-detail img:hover {
+  border-color: #007AFF;
+  transform: scale(1.05);
+}
+
+.teacher-detail .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-detail h2 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.teacher-detail p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: gold;
+}
+
+.rating-info span.count {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.teacher-detail .description {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Bewertungen */
+.reviews {
+  margin-top: 30px;
+}
+
+.review {
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  transition: background 0.3s ease;
+}
+.review:hover {
+  background: #f0f8ff;
+}
+
+.review .star-rating {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+/* Erfolgsnachricht */
+.success-message {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  background: #e8f5e9;
+  border-left: 5px solid #4caf50;
+  border-radius: 16px;
+  animation: fadeInUp 0.5s ease;
+}
+
+.success-message h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.success-message p {
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.success-message .btn-primary {
+  margin-top: 10px;
+}
+
+/* Button-Styling */
+.btn-primary {
+  background-color: #007AFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #005fd1;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+
+/* Animationen */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
