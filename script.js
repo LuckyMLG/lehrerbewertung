@@ -1,5 +1,5 @@
 // API URL – passe dies auf deine Live-URL an!
-const API_URL = "https://mein-backend.onrender.com "; // Ändere dies später!
+const API_URL = "https://lehrerbewertung.onrender.com"; // Ändere dies später!
 
 let teachers = [];
 let currentTeacher = null;
